@@ -5,3 +5,6 @@ __Состав команды:__
 Горбачев Ринат  
 Жирнов Кирилл  
 ![](https://img.devrant.com/devrant/rant/r_1998554_ZRDun.jpg)
+
+# Предметная область
+![img_1.png](img_1.png)

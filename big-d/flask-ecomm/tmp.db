@@ -1,0 +1,66 @@
+--
+-- Файл сгенерирован с помощью SQLiteStudio v3.3.3 в чт дек. 23 18:36:29 2021
+--
+-- Использованная кодировка текста: UTF-8
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Таблица: cart
+CREATE TABLE 'cart' ('image' text, 'team' text, 'qty' integer, 'price' real, 'subTotal' real, 'id' INTEGER);
+
+-- Таблица: purchases
+CREATE TABLE 'purchases' ('uid' text, 'team' text, 'image' text, 'quantity' integer, 'id' INTEGER, 'date'  date NOT NULL DEFAULT CURRENT_DATE  );
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('7', 'Juventus', 'juv.jpg', 1, 22, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'Argentina', 'argentina.png', 2, 1, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'FC Barcelona', 'fcb.jpg', 1, 20, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'FC Barcelona', 'fcb.jpg', 1, 20, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('1', 'Argentina', 'argentina.png', 1, 1, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'Colombia', 'colombia.jpg', 2, 9, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'FC Barcelona', 'fcb.jpg', 1, 20, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'Belgium', 'belgium.png', 1, 8, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('8', 'Colombia', 'colombia.jpg', 1, 9, '2018-12-13');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('10', 'Argentina', 'argentina.png', 1, 1, '2018-12-25');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('10', 'FC Barcelona', 'fcb.jpg', 1, 20, '2018-12-25');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('11', 'Argentina', 'argentina.png', 1, 1, '2021-12-23');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('11', 'Belgium', 'belgium.png', 1, 8, '2021-12-23');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('11', 'Argentina', 'argentina.png', 1, 1, '2021-12-23');
+INSERT INTO purchases (uid, team, image, quantity, id, date) VALUES ('11', 'Argentina', 'argentina.png', 1, 1, '2021-12-23');
+
+-- Таблица: shirts
+CREATE TABLE 'shirts' ('id' integer PRIMARY KEY AUTOINCREMENT NOT NULL, 'team' text, 'image' text, 'price' real,'onSale' integer, 'onSalePrice' real, 'kind' text, 'continent' text);
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (1, 'Argentina', 'argentina.png', 89.0, 0, 89.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (2, 'Brazil', 'brasil.jpg', 89.0, 0, 89.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (3, 'Peru', 'peru.jpg', 79.0, 1, 69.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (4, 'France', 'france.jpg', 89.0, 0, 89.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (5, 'Mexico', 'mexico.jpg', 79.0, 0, 79.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (6, 'Spain', 'spain.jpg', 79.0, 0, 79.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (7, 'Senegal', 'senegal.jpg', 79.0, 0, 79.0, 'national', 'africa');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (8, 'Belgium', 'belgium.png', 89.0, 1, 79.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (9, 'Colombia', 'colombia.jpg', 69.0, 0, 69.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (10, 'Costa Rica', 'costarica.jpg', 69.0, 0, 69.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (11, 'Croatia', 'croacia.jpg', 79.0, 1, 69.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (12, 'Egypt', 'egypt.jpg', 79.0, 1, 69.0, 'national', 'africa');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (13, 'England', 'england.jpg', 79.0, 0, 79.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (14, 'Germany', 'germany.png', 79.0, 1, 69.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (15, 'Iceland', 'iceland.jpg', 79.0, 0, 79.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (16, 'Sweden', 'sweden.jpg', 79.0, 0, 79.0, 'national', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (17, 'Uruguay', 'uruguay.png', 79.0, 1, 69.0, 'national', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (18, 'River Plate', 'rp.png', 79.0, 0, 79.0, 'club', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (19, 'Boca Juniors', 'bj.jpg', 69.0, 1, 9.99, 'club', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (20, 'FC Barcelona', 'fcb.jpg', 89.0, 0, 89.0, 'club', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (21, 'Real Madrid', 'rm.png', 89.0, 0, 89.0, 'club', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (22, 'Juventus', 'juv.jpg', 79.0, 0, 79.0, 'club', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (23, 'Milan', 'mil.png', 79.0, 1, 59.0, 'club', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (24, 'Manchester City', 'mc.jpg', 79.0, 0, 79.0, 'club', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (25, 'Manchester United', 'mu.png', 79.0, 1, 69.0, 'club', 'europe');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (26, 'Flamengo', 'fla.png', 59.0, 0, 59.0, 'club', 'americas');
+INSERT INTO shirts (id, team, image, price, onSale, onSalePrice, kind, continent) VALUES (27, 'Corinthians', 'cor.png', 69.0, 0, 69.0, 'club', 'americas');
+
+-- Таблица: users
+CREATE TABLE 'users' ('id' integer PRIMARY KEY AUTOINCREMENT NOT NULL, 'username' text NOT NULL, 'password' text NOT NULL, 'fname' text, 'lname' text, 'email' text);
+INSERT INTO users (id, username, password, fname, lname, email) VALUES (10, 'liomessi10', 'barcelona', 'Lio', 'Messi', 'lmessi@fcbarca.com');
+INSERT INTO users (id, username, password, fname, lname, email) VALUES (11, 'qwerty', 'qwerty123', 'Nikita', 'Beketov', 'qwerty@mail.ru');
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
